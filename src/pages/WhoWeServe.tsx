@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, GraduationCap, Heart, Briefcase } from "lucide-react";
+import { ArrowRight, Building2, GraduationCap, Shield, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
@@ -32,17 +32,17 @@ const audiences = [
     stats: { value: "42%", label: "improvement in student resilience" },
   },
   {
-    icon: Heart,
-    title: "Healthcare Organizations",
-    subtitle: "Extend care beyond clinical settings",
-    description: "Healthcare providers and insurers use Gimble to offer patients ongoing wellness support, track outcomes, and deliver personalized mental health resources between appointments.",
+    icon: Shield,
+    title: "Government Agencies",
+    subtitle: "Support public sector workforce wellbeing",
+    description: "Government agencies use Gimble to meet the mental health needs of public sector employees with secure, compliant wellness programs. Track welfare metrics, improve organizational health, and support your teams in serving the community effectively.",
     features: [
-      "Clinical assessment integration",
-      "HIPAA-compliant data handling",
-      "Care team collaboration tools",
-      "Patient engagement tracking",
+      "Secure, compliant data handling",
+      "Department-level wellness insights",
+      "Crisis support & intervention tools",
+      "Custom wellness programs for public service",
     ],
-    stats: { value: "28%", label: "better treatment adherence" },
+    stats: { value: "89%", label: "employee satisfaction rate" },
   },
   {
     icon: Briefcase,
@@ -80,7 +80,7 @@ const WhoWeServe = () => {
               <span className="text-primary">every organization</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Whether you're a company, school, healthcare provider, or non-profit, Gimble adapts to your unique needs.
+              Whether you're a company, school, government agency, or non-profit, Gimble adapts to your unique needs.
             </p>
           </div>
         </div>

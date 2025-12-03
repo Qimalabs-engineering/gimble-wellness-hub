@@ -41,7 +41,7 @@ const HowItWorks = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
             How It Works
           </span>
@@ -55,18 +55,22 @@ const HowItWorks = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative group">
+            <div 
+              key={index} 
+              className="relative group animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
               {/* Connector line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-16 left-[60%] w-full h-0.5 bg-gradient-to-r from-primary/30 to-transparent" />
               )}
 
-              <div className="bg-background rounded-3xl p-8 shadow-soft hover:shadow-card transition-all duration-300 relative z-10">
-                <span className="absolute -top-4 -right-2 text-6xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors">
+              <div className="bg-background rounded-3xl p-8 shadow-soft hover:shadow-card hover:-translate-y-2 transition-all duration-300 relative z-10">
+                <span className="absolute -top-4 -right-2 text-6xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors duration-300">
                   {step.number}
                 </span>
                 
-                <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-6 shadow-glow">
+                <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-6 shadow-glow group-hover:scale-110 transition-transform duration-300">
                   <step.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
 

@@ -1,10 +1,19 @@
+import { Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
+
 const Footer = () => {
   const links = {
     Product: ["Features", "Pricing", "Security", "Integrations", "API"],
-    Solutions: ["For Companies", "For Schools", "For Healthcare", "Enterprise"],
+    Solutions: ["For Companies", "For Schools", "For Government", "Enterprise"],
     Resources: ["Blog", "Help Center", "Webinars", "Case Studies", "Research"],
     Company: ["About", "Careers", "Press", "Contact", "Partners"],
   };
+
+  const socialLinks = [
+    { name: "Twitter", icon: Twitter, url: "https://twitter.com/usegimble" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/company/gimble" },
+    { name: "Facebook", icon: Facebook, url: "https://facebook.com/usegimble" },
+    { name: "Instagram", icon: Instagram, url: "https://instagram.com/usegimble" },
+  ];
 
   return (
     <footer className="bg-foreground text-background py-16 lg:py-20">
@@ -21,15 +30,17 @@ const Footer = () => {
             <p className="text-background/60 text-sm leading-relaxed mb-6">
               Wellbeing that works for everyone. Supporting individuals while empowering organizations.
             </p>
-            <div className="flex gap-4">
-              {["twitter", "linkedin", "instagram"].map((social) => (
+            <div className="flex gap-3">
+              {socialLinks.map((social) => (
                 <a
-                  key={social}
-                  href="#"
-                  className="w-10 h-10 rounded-xl bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
-                  aria-label={social}
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-background/10 flex items-center justify-center hover:bg-background/20 hover:scale-110 transition-all duration-300 group"
+                  aria-label={social.name}
                 >
-                  <span className="text-xs text-background/60 uppercase">{social[0]}</span>
+                  <social.icon className="w-5 h-5 text-background/60 group-hover:text-background transition-colors" />
                 </a>
               ))}
             </div>

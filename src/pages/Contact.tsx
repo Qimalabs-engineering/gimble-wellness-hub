@@ -141,8 +141,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">hello@gimble.app</p>
-                    <p className="text-muted-foreground">support@gimble.app</p>
+                    <p className="text-muted-foreground">support@usegimble.io</p>
                   </div>
                 </div>
 

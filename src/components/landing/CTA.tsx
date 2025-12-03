@@ -10,8 +10,8 @@ const CTA = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="gradient-primary rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden">
+        <div className="max-w-4xl mx-auto animate-fade-in-up">
+          <div className="gradient-primary rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden hover:scale-105 transition-transform duration-500">
             {/* Pattern overlay */}
             <div className="absolute inset-0 opacity-10">
               <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -23,18 +23,18 @@ const CTA = () => {
             </div>
 
             <div className="relative z-10">
-              <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
+              <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6 animate-fade-in">
                 Ready to transform your organization's wellbeing?
               </h2>
-              <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
+              <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 Join hundreds of forward-thinking companies and schools that use Gimble to build healthier, more resilient communities.
               </p>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <Link to="/contact">
                   <Button 
                     size="xl" 
-                    className="bg-card text-foreground hover:bg-card/90 rounded-2xl shadow-card group"
+                    className="bg-card text-foreground hover:bg-card/90 hover:scale-110 rounded-2xl shadow-card group transition-all duration-300"
                   >
                     <Calendar className="w-5 h-5" />
                     Book a Demo
@@ -43,7 +43,7 @@ const CTA = () => {
                 </Link>
               </div>
 
-              <p className="text-primary-foreground/60 text-sm mt-8">
+              <p className="text-primary-foreground/60 text-sm mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 Free consultation • No commitment required
               </p>
             </div>

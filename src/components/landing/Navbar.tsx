@@ -16,8 +16,6 @@ const Navbar = () => {
 
   const homeLinks = [
     { name: "Features", href: "#features" },
-    { name: "For Users", href: "#users" },
-    { name: "For Organizations", href: "#organizations" },
   ];
 
   const displayLinks = isHomePage ? [...homeLinks, ...navLinks] : navLinks;
