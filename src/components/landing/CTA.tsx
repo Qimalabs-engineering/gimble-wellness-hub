@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -29,26 +30,21 @@ const CTA = () => {
                 Join hundreds of forward-thinking companies and schools that use Gimble to build healthier, more resilient communities.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="xl" 
-                  className="bg-card text-foreground hover:bg-card/90 rounded-2xl shadow-card group"
-                >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button 
-                  size="xl" 
-                  variant="outline"
-                  className="border-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 rounded-2xl"
-                >
-                  <Mail className="w-5 h-5" />
-                  Contact Sales
-                </Button>
+              <div className="flex justify-center">
+                <Link to="/contact">
+                  <Button 
+                    size="xl" 
+                    className="bg-card text-foreground hover:bg-card/90 rounded-2xl shadow-card group"
+                  >
+                    <Calendar className="w-5 h-5" />
+                    Book a Demo
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </div>
 
               <p className="text-primary-foreground/60 text-sm mt-8">
-                No credit card required • Free 14-day trial • Cancel anytime
+                Free consultation • No commitment required
               </p>
             </div>
           </div>

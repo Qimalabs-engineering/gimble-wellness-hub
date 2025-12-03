@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
 import appMockup from "@/assets/app-mockup.png";
 
@@ -39,14 +40,13 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="group">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="heroOutline" size="lg" className="group">
-                <Play className="w-5 h-5" />
-                Watch Demo
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="lg" className="group">
+                  <Calendar className="w-5 h-5" />
+                  Book a Demo
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
             </div>
 
             {/* Social proof */}
