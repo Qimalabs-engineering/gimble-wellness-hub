@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import teamWellness from "@/assets/team-wellness.png";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -15,7 +16,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
@@ -35,7 +35,7 @@ const Contact = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
               Contact Us
             </span>
@@ -55,7 +55,7 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
-            <div className="bg-card rounded-3xl p-8 lg:p-10 shadow-soft">
+            <div className="bg-card rounded-3xl p-8 lg:p-10 shadow-soft animate-fade-in-left">
               <h2 className="text-2xl font-bold text-foreground mb-6">Book a Demo</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -63,13 +63,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
-                    <Input placeholder="John" required />
+                    <Input placeholder="John" required className="h-12 rounded-xl" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name
                     </label>
-                    <Input placeholder="Doe" required />
+                    <Input placeholder="Doe" required className="h-12 rounded-xl" />
                   </div>
                 </div>
                 
@@ -77,21 +77,21 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Work Email
                   </label>
-                  <Input type="email" placeholder="john@company.com" required />
+                  <Input type="email" placeholder="john@company.com" required className="h-12 rounded-xl" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Organization Name
                   </label>
-                  <Input placeholder="Your Company" required />
+                  <Input placeholder="Your Company" required className="h-12 rounded-xl" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Organization Type
                   </label>
-                  <select className="w-full h-11 px-4 rounded-xl border border-input bg-background text-foreground">
+                  <select className="w-full h-12 px-4 rounded-xl border border-input bg-background text-foreground">
                     <option value="">Select type...</option>
                     <option value="company">Company</option>
                     <option value="school">School / University</option>
@@ -108,6 +108,7 @@ const Contact = () => {
                   <Textarea 
                     placeholder="Tell us about your organization and what you're looking for..."
                     rows={4}
+                    className="rounded-xl"
                   />
                 </div>
 
@@ -125,7 +126,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className="space-y-8 animate-fade-in-right">
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -135,8 +136,8 @@ const Contact = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -145,8 +146,8 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -156,8 +157,8 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -168,12 +169,31 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* FAQ callout */}
-              <div className="bg-card rounded-3xl p-8 shadow-soft mt-8">
-                <h3 className="font-bold text-foreground mb-2">Have questions?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Check out our frequently asked questions or reach out directly—we're happy to help.
-                </p>
+              {/* Team image */}
+              <div className="relative rounded-3xl overflow-hidden shadow-card mt-8">
+                <img 
+                  src={teamWellness} 
+                  alt="Gimble team" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-background font-medium">Our team is ready to help</p>
+                </div>
+              </div>
+
+              {/* Trust badges */}
+              <div className="bg-card rounded-3xl p-6 shadow-soft">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="font-medium text-foreground">What to expect</span>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Personalized demo of Gimble's features</li>
+                  <li>• Discussion of your organization's needs</li>
+                  <li>• Pricing and implementation timeline</li>
+                  <li>• No commitment required</li>
+                </ul>
               </div>
             </div>
           </div>

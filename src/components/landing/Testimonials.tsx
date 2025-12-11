@@ -1,4 +1,7 @@
 import { Star, Quote } from "lucide-react";
+import testimonial1 from "@/assets/testimonial-1.png";
+import testimonial2 from "@/assets/testimonial-2.png";
+import testimonial3 from "@/assets/testimonial-3.png";
 
 const testimonials = [
   {
@@ -7,6 +10,7 @@ const testimonials = [
     role: "HR Director",
     company: "TechForward Inc.",
     rating: 5,
+    image: testimonial1,
   },
   {
     quote: "Our students are more self-aware and emotionally resilient since implementing Gimble. The journeys feature is particularly impactful.",
@@ -14,6 +18,7 @@ const testimonials = [
     role: "Dean of Student Affairs",
     company: "Westbridge University",
     rating: 5,
+    image: testimonial2,
   },
   {
     quote: "Finally, a wellness platform that respects user privacy while giving organizations meaningful data. It's exactly what we needed.",
@@ -21,6 +26,7 @@ const testimonials = [
     role: "Chief People Officer",
     company: "Innovate Labs",
     rating: 5,
+    image: testimonial3,
   },
 ];
 
@@ -55,7 +61,7 @@ const Testimonials = () => {
               
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-accent fill-current hover:scale-110 transition-transform duration-200" />
+                  <Star key={i} className="w-5 h-5 text-primary fill-current hover:scale-110 transition-transform duration-200" />
                 ))}
               </div>
 
@@ -64,9 +70,11 @@ const Testimonials = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center text-primary-foreground font-bold group-hover:scale-110 transition-transform duration-300">
-                  {testimonial.author.split(" ").map(n => n[0]).join("")}
-                </div>
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.author}
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300"
+                />
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.author}</p>
                   <p className="text-sm text-muted-foreground">

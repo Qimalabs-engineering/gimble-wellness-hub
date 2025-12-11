@@ -3,6 +3,8 @@ import { ArrowRight, Building2, GraduationCap, Shield, Briefcase } from "lucide-
 import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import teamWellness from "@/assets/team-wellness.png";
+import studentsWellness from "@/assets/students-wellness.png";
 
 const audiences = [
   {
@@ -17,6 +19,7 @@ const audiences = [
       "Integration with HR systems",
     ],
     stats: { value: "34%", label: "reduction in burnout" },
+    image: teamWellness,
   },
   {
     icon: GraduationCap,
@@ -30,6 +33,7 @@ const audiences = [
       "Crisis support integration",
     ],
     stats: { value: "42%", label: "improvement in student resilience" },
+    image: studentsWellness,
   },
   {
     icon: Shield,
@@ -43,6 +47,7 @@ const audiences = [
       "Custom wellness programs for public service",
     ],
     stats: { value: "89%", label: "employee satisfaction rate" },
+    image: teamWellness,
   },
   {
     icon: Briefcase,
@@ -56,6 +61,7 @@ const audiences = [
       "Impact measurement tools",
     ],
     stats: { value: "500+", label: "organizations served" },
+    image: studentsWellness,
   },
 ];
 
@@ -71,7 +77,7 @@ const WhoWeServe = () => {
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
               Who We Serve
             </span>
@@ -89,15 +95,13 @@ const WhoWeServe = () => {
       {/* Audiences */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-6">
-          <div className="space-y-20">
+          <div className="space-y-32">
             {audiences.map((audience, index) => (
               <div 
                 key={index}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
               >
-                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                <div className={`${index % 2 === 1 ? "lg:order-2" : ""} animate-fade-in-up`}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-2xl gradient-primary flex items-center justify-center">
                       <audience.icon className="w-6 h-6 text-primary-foreground" />
@@ -115,8 +119,8 @@ const WhoWeServe = () => {
 
                   <ul className="space-y-3 mb-8">
                     {audience.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                      <li key={i} className="flex items-center gap-3 group">
+                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <div className="w-2 h-2 rounded-full bg-primary" />
                         </div>
                         <span className="text-foreground">{feature}</span>
@@ -124,27 +128,27 @@ const WhoWeServe = () => {
                     ))}
                   </ul>
 
-                  <Link to="/contact">
-                    <Button variant="hero" className="group">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                  </Link>
-                </div>
-
-                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className="bg-card rounded-3xl p-10 shadow-soft relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl" />
-                    
-                    <div className="text-center relative z-10">
-                      <p className="text-6xl lg:text-7xl font-bold text-primary mb-2">
-                        {audience.stats.value}
-                      </p>
-                      <p className="text-muted-foreground text-lg">
-                        {audience.stats.label}
-                      </p>
+                  <div className="flex items-center gap-6">
+                    <Link to="/contact">
+                      <Button variant="hero" className="group">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </Link>
+                    <div className="text-center">
+                      <p className="text-2xl font-bold text-primary">{audience.stats.value}</p>
+                      <p className="text-sm text-muted-foreground">{audience.stats.label}</p>
                     </div>
                   </div>
+                </div>
+
+                <div className={`${index % 2 === 1 ? "lg:order-1" : ""} relative animate-fade-in-up`}>
+                  <img 
+                    src={audience.image} 
+                    alt={audience.title}
+                    className="w-full rounded-3xl shadow-card"
+                  />
+                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
                 </div>
               </div>
             ))}
@@ -155,7 +159,7 @@ const WhoWeServe = () => {
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-card">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
               Ready to get started?
             </h2>
