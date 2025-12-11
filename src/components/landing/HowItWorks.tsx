@@ -1,4 +1,5 @@
 import { UserPlus, BookOpen, ClipboardCheck, TrendingUp } from "lucide-react";
+import forestPath from "@/assets/forest-path.png";
 
 const steps = [
   {
@@ -30,14 +31,14 @@ const steps = [
 const HowItWorks = () => {
   return (
     <section className="py-24 lg:py-32 bg-card relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <pattern id="grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-            <circle cx="1" cy="1" r="0.5" fill="currentColor" />
-          </pattern>
-          <rect x="0" y="0" width="100" height="100" fill="url(#grid)" />
-        </svg>
+      {/* Background image */}
+      <div className="absolute right-0 top-0 w-1/3 h-full hidden lg:block">
+        <img 
+          src={forestPath} 
+          alt="Peaceful forest path" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-card via-card/80 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

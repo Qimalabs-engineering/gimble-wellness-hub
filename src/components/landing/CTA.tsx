@@ -1,32 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+import abstractWellness from "@/assets/abstract-wellness.png";
 
 const CTA = () => {
   return (
-    <section className="py-24 lg:py-32 bg-card relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+    <section className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src={abstractWellness} 
+          alt="Abstract wellness waves" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-foreground/60" />
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="gradient-primary rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden hover:scale-105 transition-transform duration-500">
-            {/* Pattern overlay */}
-            <div className="absolute inset-0 opacity-10">
-              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1" fill="currentColor" />
-                </pattern>
-                <rect x="0" y="0" width="100" height="100" fill="url(#dots)" />
-              </svg>
-            </div>
+          <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden hover:scale-105 transition-transform duration-500 shadow-card">
 
             <div className="relative z-10">
-              <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6 animate-fade-in">
+              <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
                 Ready to transform your organization's wellbeing?
               </h2>
-              <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 Join hundreds of forward-thinking companies and schools that use Gimble to build healthier, more resilient communities.
               </p>
 
@@ -43,7 +41,7 @@ const CTA = () => {
                 </Link>
               </div>
 
-              <p className="text-primary-foreground/60 text-sm mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <p className="text-muted-foreground text-sm mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 Free consultation • No commitment required
               </p>
             </div>
