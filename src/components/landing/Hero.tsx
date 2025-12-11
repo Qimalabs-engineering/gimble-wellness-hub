@@ -1,19 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.png";
+import landscapeHero from "@/assets/landscape-hero.png";
 import appMockup from "@/assets/app-mockup.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen pt-20 lg:pt-0 flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 gradient-hero" />
-      <img 
-        src={heroBg} 
-        alt="" 
-        className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-soft-light"
-      />
+      {/* Background landscape */}
+      <div className="absolute inset-0">
+        <img 
+          src={landscapeHero} 
+          alt="Serene green landscape" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      </div>
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
