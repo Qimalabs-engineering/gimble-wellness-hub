@@ -3,6 +3,8 @@ import { ArrowRight, Heart, Shield, Users, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import teamWellness from "@/assets/team-wellness.png";
+import abstractWellness from "@/assets/abstract-wellness.png";
 
 const values = [
   {
@@ -34,11 +36,17 @@ const AboutUs = () => {
       
       {/* Hero */}
       <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
-        <div className="absolute inset-0 gradient-hero opacity-50" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0">
+          <img 
+            src={abstractWellness} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/90" />
+        </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
               About Gimble
             </span>
@@ -53,11 +61,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Story */}
+      {/* Story with Team Image */}
       <section className="py-20 lg:py-28 bg-card">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="animate-fade-in-left">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
                 Our Story
               </h2>
@@ -73,24 +81,21 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-10 lg:p-16">
-                <div className="grid grid-cols-2 gap-8 text-center">
+            <div className="relative animate-fade-in-right">
+              <img 
+                src={teamWellness} 
+                alt="Diverse team collaborating in modern office" 
+                className="w-full rounded-3xl shadow-card"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-card">
+                <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">500+</p>
-                    <p className="text-muted-foreground">Organizations</p>
+                    <p className="text-3xl font-bold text-primary">500+</p>
+                    <p className="text-sm text-muted-foreground">Organizations</p>
                   </div>
                   <div>
-                    <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">250K+</p>
-                    <p className="text-muted-foreground">Users Supported</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">30+</p>
-                    <p className="text-muted-foreground">Countries</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">4.9</p>
-                    <p className="text-muted-foreground">User Rating</p>
+                    <p className="text-3xl font-bold text-primary">250K+</p>
+                    <p className="text-sm text-muted-foreground">Users</p>
                   </div>
                 </div>
               </div>
@@ -99,10 +104,34 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Stats Banner */}
+      <section className="py-16 gradient-primary">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="animate-fade-in-up" style={{ animationDelay: '0s' }}>
+              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">500+</p>
+              <p className="text-primary-foreground/80">Organizations</p>
+            </div>
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">250K+</p>
+              <p className="text-primary-foreground/80">Users Supported</p>
+            </div>
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">30+</p>
+              <p className="text-primary-foreground/80">Countries</p>
+            </div>
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">4.9</p>
+              <p className="text-primary-foreground/80">User Rating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Our Values
             </h2>
@@ -113,7 +142,11 @@ const AboutUs = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-card transition-all duration-300">
+              <div 
+                key={index} 
+                className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-card hover:-translate-y-2 transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-6">
                   <value.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
@@ -128,7 +161,7 @@ const AboutUs = () => {
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-card">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
               Ready to transform your organization?
             </h2>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
-import appMockup from "@/assets/app-mockup.png";
+import userApp from "@/assets/user-app.png";
 
 const UserSection = () => {
   const benefits = [
@@ -19,7 +19,7 @@ const UserSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
-          <div>
+          <div className="animate-fade-in-left">
             <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
               For Individuals
             </span>
@@ -32,8 +32,8 @@ const UserSection = () => {
 
             <ul className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <li key={index} className="flex items-start gap-3 group">
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary/20 transition-colors">
                     <Check className="w-4 h-4 text-primary" />
                   </div>
                   <span className="text-foreground">{benefit}</span>
@@ -48,12 +48,12 @@ const UserSection = () => {
           </div>
 
           {/* Image */}
-          <div className="relative">
+          <div className="relative animate-fade-in-right">
             <div className="relative z-10">
               <img
-                src={appMockup}
-                alt="Gimble mobile app for users"
-                className="w-full max-w-md mx-auto rounded-3xl shadow-card"
+                src={userApp}
+                alt="Person using Gimble wellness app"
+                className="w-full max-w-lg mx-auto rounded-3xl shadow-card"
               />
             </div>
             {/* Decorative elements */}
