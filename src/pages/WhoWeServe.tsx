@@ -3,8 +3,10 @@ import { ArrowRight, Building2, GraduationCap, Shield, Briefcase } from "lucide-
 import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
-import teamWellness from "@/assets/team-wellness.png";
+import companiesWellness from "@/assets/companies-wellness.png";
 import studentsWellness from "@/assets/students-wellness.png";
+import governmentWellness from "@/assets/government-wellness.png";
+import nonprofitWellness from "@/assets/nonprofit-wellness.png";
 
 const audiences = [
   {
@@ -19,7 +21,7 @@ const audiences = [
       "Integration with HR systems",
     ],
     stats: { value: "34%", label: "reduction in burnout" },
-    image: teamWellness,
+    image: companiesWellness,
   },
   {
     icon: GraduationCap,
@@ -47,7 +49,7 @@ const audiences = [
       "Custom wellness programs for public service",
     ],
     stats: { value: "89%", label: "employee satisfaction rate" },
-    image: teamWellness,
+    image: governmentWellness,
   },
   {
     icon: Briefcase,
@@ -61,7 +63,7 @@ const audiences = [
       "Impact measurement tools",
     ],
     stats: { value: "500+", label: "organizations served" },
-    image: studentsWellness,
+    image: nonprofitWellness,
   },
 ];
 
@@ -128,16 +130,16 @@ const WhoWeServe = () => {
                     ))}
                   </ul>
 
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-8">
                     <Link to="/contact">
                       <Button variant="hero" className="group">
                         Learn More
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </Button>
                     </Link>
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-primary">{audience.stats.value}</p>
-                      <p className="text-sm text-muted-foreground">{audience.stats.label}</p>
+                    <div className="text-center px-6 py-3 bg-primary/10 rounded-2xl">
+                      <p className="text-4xl lg:text-5xl font-bold text-primary">{audience.stats.value}</p>
+                      <p className="text-sm text-muted-foreground font-medium">{audience.stats.label}</p>
                     </div>
                   </div>
                 </div>
