@@ -3,6 +3,7 @@ import { ArrowRight, Building2, GraduationCap, Shield, Briefcase } from "lucide-
 import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 import companiesWellness from "@/assets/companies-wellness.png";
 import studentsWellness from "@/assets/students-wellness.png";
 import governmentWellness from "@/assets/government-wellness.png";
@@ -70,6 +71,11 @@ const audiences = [
 const WhoWeServe = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SEO 
+        title="Who We Serve - Companies, Schools, Government & Non-profits | Gimble"
+        description="Gimble serves companies, schools, government agencies, and non-profits with tailored mental health solutions. See how we support employee and student wellbeing."
+        canonical="https://gimble.app/who-we-serve"
+      />
       <Navbar />
       
       {/* Hero */}

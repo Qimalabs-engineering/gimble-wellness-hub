@@ -3,6 +3,7 @@ import { ArrowRight, Heart, Shield, Users, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 import teamWellness from "@/assets/team-wellness.png";
 import abstractWellness from "@/assets/abstract-wellness.png";
 
@@ -32,6 +33,11 @@ const values = [
 const AboutUs = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SEO 
+        title="About Gimble - Our Mission & Story | Mental Health Platform"
+        description="Learn about Gimble's mission to support mental health in organizations. 500+ organizations trust us to help their people thrive with ethical wellness solutions."
+        canonical="https://gimble.app/about"
+      />
       <Navbar />
       
       {/* Hero */}
