@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 import teamWellness from "@/assets/team-wellness.png";
 
 const Contact = () => {
@@ -27,6 +28,11 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Gimble - Book a Demo | Mental Health Platform"
+        description="Get in touch with Gimble. Book a personalized demo to see how our mental health platform can support your organization's wellbeing needs."
+        canonical="https://gimble.app/contact"
+      />
       <Navbar />
       
       {/* Hero */}
