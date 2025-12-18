@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import SEO from "@/components/SEO";
-import companiesWellness from "@/assets/companies-wellness.png";
-import studentsWellness from "@/assets/students-wellness.png";
-import governmentWellness from "@/assets/government-wellness.png";
-import nonprofitWellness from "@/assets/nonprofit-wellness.png";
+import companiesWellness from "@/assets/african-companies.png";
+import studentsWellness from "@/assets/african-students.png";
+import governmentWellness from "@/assets/african-government.png";
+import nonprofitWellness from "@/assets/african-nonprofit.png";
 
 const audiences = [
   {

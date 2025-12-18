@@ -1,24 +1,57 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, Smartphone, Apple, Download } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const navLinks = [
-    { name: "Who We Serve", href: "/who-we-serve", isRoute: true },
-    { name: "About Us", href: "/about", isRoute: true },
-    { name: "Contact", href: "/contact", isRoute: true },
+  const navItems = [
+    {
+      label: "Product",
+      href: "/product",
+      hasDropdown: false,
+    },
+    {
+      label: "Solutions",
+      href: "/solutions",
+      hasDropdown: true,
+      items: [
+        { name: "Corporate Wellness", href: "/solutions" },
+        { name: "Education", href: "/solutions" },
+        { name: "Government", href: "/solutions" },
+        { name: "Who We Serve", href: "/who-we-serve" },
+      ],
+    },
+    {
+      label: "Resources",
+      href: "/resources",
+      hasDropdown: true,
+      items: [
+        { name: "Blog & Articles", href: "/resources" },
+        { name: "Guides & Whitepapers", href: "/resources" },
+        { name: "Webinars", href: "/resources" },
+      ],
+    },
+    {
+      label: "Company",
+      href: "/company",
+      hasDropdown: true,
+      items: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/company" },
+        { name: "Contact", href: "/contact" },
+      ],
+    },
   ];
-
-  const homeLinks = [
-    { name: "Features", href: "#features" },
-  ];
-
-  const displayLinks = isHomePage ? [...homeLinks, ...navLinks] : navLinks;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
@@ -33,33 +66,67 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {displayLinks.map((link) => (
-              "isRoute" in link && link.isRoute ? (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
-                >
-                  {link.name}
-                </Link>
+          <div className="hidden lg:flex items-center gap-6">
+            {isHomePage && (
+              <a
+                href="#features"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+              >
+                Features
+              </a>
+            )}
+            {navItems.map((item) => (
+              item.hasDropdown ? (
+                <DropdownMenu key={item.label}>
+                  <DropdownMenuTrigger className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium outline-none">
+                    {item.label}
+                    <ChevronDown className="w-4 h-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-48">
+                    {item.items?.map((subItem) => (
+                      <DropdownMenuItem key={subItem.name} asChild>
+                        <Link to={subItem.href} className="cursor-pointer">
+                          {subItem.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               ) : (
-                <a
-                  key={link.name}
-                  href={link.href}
+                <Link
+                  key={item.label}
+                  to={item.href}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
                 >
-                  {link.name}
-                </a>
+                  {item.label}
+                </Link>
               )
             ))}
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost">Sign In</Button>
+          <div className="hidden lg:flex items-center gap-3">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Download className="w-4 h-4" />
+                  Get App
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuItem className="gap-2 cursor-pointer">
+                  <Apple className="w-4 h-4" />
+                  Download for iOS
+                </DropdownMenuItem>
+                <DropdownMenuItem className="gap-2 cursor-pointer">
+                  <Smartphone className="w-4 h-4" />
+                  Download for Android
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button variant="ghost" size="sm">Sign In</Button>
             <Link to="/contact">
-              <Button variant="hero">Book a Demo</Button>
+              <Button variant="hero" size="sm">Book a Demo</Button>
             </Link>
           </div>
 
@@ -75,31 +142,48 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border/50 animate-fade-in">
-            <div className="flex flex-col gap-4">
-              {displayLinks.map((link) => (
-                "isRoute" in link && link.isRoute ? (
+            <div className="flex flex-col gap-2">
+              {isHomePage && (
+                <a
+                  href="#features"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Features
+                </a>
+              )}
+              {navItems.map((item) => (
+                <div key={item.label}>
                   <Link
-                    key={link.name}
-                    to={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"
+                    to={item.href}
+                    className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2 block"
                     onClick={() => setIsOpen(false)}
                   >
-                    {link.name}
+                    {item.label}
                   </Link>
-                ) : (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                )
+                  {item.hasDropdown && item.items && (
+                    <div className="pl-4 flex flex-col gap-1">
+                      {item.items.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 py-1.5"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-              <div className="flex flex-col gap-3 pt-4 border-t border-border/50">
+              <div className="flex flex-col gap-3 pt-4 border-t border-border/50 mt-2">
+                <Button variant="outline" className="justify-start gap-2">
+                  <Download className="w-4 h-4" />
+                  Download App
+                </Button>
                 <Button variant="ghost" className="justify-start">Sign In</Button>
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
                   <Button variant="hero" className="w-full">Book a Demo</Button>
                 </Link>
               </div>

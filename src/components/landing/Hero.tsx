@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import landscapeHero from "@/assets/landscape-hero.png";
+import africanTeamWellness from "@/assets/african-team-wellness.png";
 import appMockup from "@/assets/app-mockup.png";
 
 const Hero = () => {
@@ -10,8 +10,8 @@ const Hero = () => {
       {/* Background landscape */}
       <div className="absolute inset-0">
         <img 
-          src={landscapeHero} 
-          alt="Serene green landscape" 
+          src={africanTeamWellness} 
+          alt="African professionals collaborating on wellness" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
