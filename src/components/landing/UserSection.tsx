@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
-import userApp from "@/assets/user-app.png";
+import userApp from "@/assets/african-user-app.png";
 import { useEffect, useState, useRef } from "react";
 
 const UserSection = () => {
