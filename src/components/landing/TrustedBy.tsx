@@ -44,11 +44,11 @@ const TrustedBy = () => {
       <div className="container mx-auto px-6">
         <div className={`text-center mb-12 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-            Trusted by Leading{" "}
-            <span className="text-primary">Enterprise Organizations</span>
+            Trusted by{" "}
+            <span className="text-primary">Forward-Thinking Organizations</span>
           </h2>
           <p className="text-muted-foreground">
-            Join hundreds of forward-thinking companies prioritizing employee wellbeing
+            Join the growing list of companies prioritizing employee wellbeing
           </p>
         </div>
 
@@ -88,9 +88,9 @@ const TrustedBy = () => {
         {/* Stats row */}
         <div className={`flex flex-wrap justify-center gap-8 lg:gap-16 mt-12 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
           {[
-            { value: "500+", label: "Organizations" },
-            { value: "100K+", label: "Active Users" },
-            { value: "50+", label: "Countries" },
+            { value: "20+", label: "Organizations" },
+            { value: "1K+", label: "Active Users" },
+            { value: "5+", label: "Countries" },
           ].map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="text-2xl lg:text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">

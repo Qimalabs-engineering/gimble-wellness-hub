@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Smartphone, Apple, Download } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,7 +13,22 @@ import ThemeToggle from "./ThemeToggle";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
+
+  const scrollToSection = (sectionId: string) => {
+    if (!isHomePage) {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsOpen(false);
+  };
 
   const navItems = [
     {
@@ -68,14 +83,24 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            {isHomePage && (
-              <a
-                href="#features"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
-              >
-                Features
-              </a>
-            )}
+            <button
+              onClick={() => scrollToSection("features")}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+            >
+              Features
+            </button>
+            <button
+              onClick={() => scrollToSection("how-it-works")}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+            >
+              How It Works
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+            >
+              FAQ
+            </button>
             {navItems.map((item) => (
               item.hasDropdown ? (
                 <DropdownMenu key={item.label}>
@@ -145,15 +170,24 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-border/50 animate-fade-in">
             <div className="flex flex-col gap-2">
-              {isHomePage && (
-                <a
-                  href="#features"
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Features
-                </a>
-              )}
+              <button
+                onClick={() => scrollToSection("features")}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2 text-left"
+              >
+                Features
+              </button>
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2 text-left"
+              >
+                How It Works
+              </button>
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2 text-left"
+              >
+                FAQ
+              </button>
               {navItems.map((item) => (
                 <div key={item.label}>
                   <Link

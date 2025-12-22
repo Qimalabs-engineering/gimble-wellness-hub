@@ -51,7 +51,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-24 lg:py-32 bg-card relative overflow-hidden">
+    <section id="features" className="py-24 lg:py-32 bg-card relative overflow-hidden scroll-mt-20">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-primary/5 rounded-full blur-3xl animate-breathe" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-float-delayed" />

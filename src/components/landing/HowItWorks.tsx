@@ -34,7 +34,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 lg:py-32 bg-card relative overflow-hidden">
+    <section id="how-it-works" className="py-24 lg:py-32 bg-card relative overflow-hidden scroll-mt-20">
       {/* Background image */}
       <div className="absolute right-0 top-0 w-1/3 h-full hidden lg:block">
         <img 

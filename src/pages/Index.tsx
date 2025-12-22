@@ -28,7 +28,7 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <SEO 
         title="Gimble - Mental Health & Wellness Platform for Organizations"
-        description="Gimble empowers individuals with mental health tools while giving organizations ethical insights into team wellbeing. Reduce burnout, improve retention. Trusted by 500+ organizations."
+        description="Gimble empowers individuals with mental health tools while giving organizations ethical insights into team wellbeing. Reduce burnout, improve retention. Trusted by 20+ organizations."
         canonical="https://gimble.app"
         structuredData={structuredData}
       />
