@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
+import gimbleLogo from "@/assets/gimble-logo.png";
 
 const Footer = () => {
   const links = {
@@ -21,11 +22,8 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-6 lg:mb-0">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">G</span>
-              </div>
-              <span className="text-xl font-bold text-background">Gimble</span>
+            <div className="flex items-center mb-4">
+              <img src={gimbleLogo} alt="Gimble" className="h-10 w-auto" />
             </div>
             <p className="text-background/60 text-sm leading-relaxed mb-6">
               Wellbeing that works for everyone. Supporting individuals while empowering organizations.
