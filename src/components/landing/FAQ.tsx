@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "How long does it take to implement Gimble in an organization?",
-    answer: "Implementation typically takes 1-2 weeks. Our team handles setup, integration with your existing HR systems, and provides training for administrators. Employee onboarding is self-service and takes just minutes.",
+    answer: "Implementation typically takes 1-2 weeks. Our team handles setup and provides training for administrators. Employee onboarding is self-service and takes just minutes.",
   },
   {
     question: "Is Gimble available in multiple languages?",
@@ -24,19 +24,11 @@ const faqs = [
   },
   {
     question: "Can individuals use Gimble without an organization?",
-    answer: "Absolutely. While we offer enterprise solutions, individuals can download the Gimble app and access core mental wellness features for free. Premium features are available through affordable personal subscriptions.",
+    answer: "Not yet—we're currently focused on serving organizations. However, we plan to introduce individual access in the future. Stay tuned for updates!",
   },
   {
     question: "What kind of insights do organizations receive?",
     answer: "Organizations receive aggregated, anonymized insights including overall wellbeing scores, engagement trends, common stressors (department-level only), and ROI metrics like reduced absenteeism and improved productivity indicators.",
-  },
-  {
-    question: "Does Gimble integrate with existing HR systems?",
-    answer: "Yes, Gimble integrates seamlessly with popular HR platforms, employee benefits systems, and communication tools like Slack and Microsoft Teams. Our API also allows for custom integrations.",
-  },
-  {
-    question: "What support is available for users in crisis?",
-    answer: "Gimble includes a 24/7 crisis support feature that connects users with trained counselors. We also integrate with local emergency services and mental health hotlines across Africa.",
   },
 ];
 
