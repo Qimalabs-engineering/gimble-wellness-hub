@@ -50,7 +50,7 @@ const Hero = () => {
             >
               <Sparkles className="w-4 h-4 animate-pulse" />
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Trusted by 500+ organizations
+              Africa's Mental Wellness Platform
             </div>
             
             <h1 
@@ -124,7 +124,7 @@ const Hero = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground">4.9/5 from 2,000+ reviews</p>
+                <p className="text-sm text-muted-foreground">4.9/5 from 1,000+ reviews</p>
               </div>
             </div>
           </div>

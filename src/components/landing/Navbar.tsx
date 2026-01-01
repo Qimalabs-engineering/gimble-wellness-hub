@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import ThemeToggle from "./ThemeToggle";
-import gimbleLogo from "@/assets/gimble-logo.png";
+import gimbleIcon from "@/assets/gimble-icon.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +53,7 @@ const Navbar = () => {
       label: "Company",
       items: [
         { name: "About Us", href: "/about" },
+        { name: "Blog", href: "/blog" },
         { name: "Resources", href: "/resources" },
         { name: "Contact", href: "/contact" },
       ],
@@ -64,8 +65,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={gimbleLogo} alt="Gimble" className="h-10 w-auto" />
+          <Link to="/" className="flex items-center gap-2">
+            <img src={gimbleIcon} alt="Gimble" className="h-10 w-auto" />
+            <span className="text-xl font-bold text-foreground font-display">Gimble</span>
           </Link>
 
           {/* Desktop Navigation */}
