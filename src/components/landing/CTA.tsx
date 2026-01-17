@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import abstractWellness from "@/assets/abstract-wellness.png";
 import { useEffect, useState, useRef } from "react";
+import WaitlistForm from "./WaitlistForm";
 
 const CTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,16 +73,25 @@ const CTA = () => {
                 Ready to transform your{" "}
                 <span className="text-primary">organization's wellbeing</span>?
               </h2>
-              <p className={`text-muted-foreground text-lg mb-10 max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.2s' }}>
+              <p className={`text-muted-foreground text-lg mb-8 max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.2s' }}>
                 Join hundreds of forward-thinking companies and schools that use Gimble to build healthier, more resilient communities.
               </p>
 
-              <div className={`flex justify-center ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.3s' }}>
+              {/* Waitlist Form */}
+              <div className={`max-w-lg mx-auto mb-8 ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.3s' }}>
+                <WaitlistForm buttonText="Join the Waitlist" />
+              </div>
+
+              <div className={`flex justify-center ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.4s' }}>
+                <p className="text-muted-foreground text-sm mb-4">Or schedule a personalized demo</p>
+              </div>
+              
+              <div className={`flex justify-center ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.5s' }}>
                 <Link to="/contact">
                   <Button 
-                    variant="hero"
-                    size="xl" 
-                    className="hover-glow group"
+                    variant="heroOutline"
+                    size="lg" 
+                    className="group"
                   >
                     <Calendar className="w-5 h-5" />
                     Book a Demo
@@ -91,7 +101,7 @@ const CTA = () => {
               </div>
 
               {/* Trust indicators */}
-              <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-muted-foreground ${isVisible ? 'animate-fade-in' : ''}`} style={{ animationDelay: '0.5s' }}>
+              <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-muted-foreground ${isVisible ? 'animate-fade-in' : ''}`} style={{ animationDelay: '0.6s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   Free consultation
