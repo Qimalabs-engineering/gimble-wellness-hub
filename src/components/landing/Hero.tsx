@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import africanTeamWellness from "@/assets/african-team-wellness.png";
 import appMockup from "@/assets/app-mockup.png";
@@ -86,10 +86,10 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up"
               style={{ animationDelay: '0.5s' }}
             >
-              <Link to="/contact">
+              <Link to="/waitlist">
                 <Button variant="hero" size="xl" className="group hover-glow">
-                  <Calendar className="w-5 h-5" />
-                  Book a Demo
+                  <Sparkles className="w-5 h-5" />
+                  Join the Waitlist
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>

@@ -14,6 +14,7 @@ import Resources from "./pages/Resources";
 import Company from "./pages/Company";
 import Blog from "./pages/Blog";
 import FAQPage from "./pages/FAQ";
+import Waitlist from "./pages/Waitlist";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/company" element={<Company />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/waitlist" element={<Waitlist />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
