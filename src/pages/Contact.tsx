@@ -159,7 +159,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
                     <p className="text-muted-foreground">+2349133309770</p>
-                    <p className="text-sm text-muted-foreground">Mon-Fri, 9am-6pm EST</p>
+                    <p className="text-sm text-muted-foreground">Mon-Fri, 9am-6pm WAT</p>
                   </div>
                 </div>
 
