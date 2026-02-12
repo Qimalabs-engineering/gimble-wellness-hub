@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Smartphone, Apple, Download } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
@@ -106,27 +106,8 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Download className="w-4 h-4" />
-                  Get App
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-popover border border-border shadow-lg">
-                <DropdownMenuItem className="gap-2 cursor-pointer">
-                  <Apple className="w-4 h-4" />
-                  Download for iOS
-                </DropdownMenuItem>
-                <DropdownMenuItem className="gap-2 cursor-pointer">
-                  <Smartphone className="w-4 h-4" />
-                  Download for Android
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Button variant="ghost" size="sm">Sign In</Button>
-            <Link to="/contact">
-              <Button variant="hero" size="sm">Book a Demo</Button>
+            <Link to="/waitlist">
+              <Button variant="hero" size="sm">Join the Waitlist</Button>
             </Link>
           </div>
 
@@ -180,13 +161,8 @@ const Navbar = () => {
                 FAQ
               </Link>
               <div className="flex flex-col gap-3 pt-4 border-t border-border/50">
-                <Button variant="outline" className="justify-start gap-2">
-                  <Download className="w-4 h-4" />
-                  Download App
-                </Button>
-                <Button variant="ghost" className="justify-start">Sign In</Button>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  <Button variant="hero" className="w-full">Book a Demo</Button>
+                <Link to="/waitlist" onClick={() => setIsOpen(false)}>
+                  <Button variant="hero" className="w-full">Join the Waitlist</Button>
                 </Link>
               </div>
             </div>
