@@ -82,23 +82,6 @@ const CTA = () => {
                 <WaitlistForm buttonText="Join the Waitlist" />
               </div>
 
-              <div className={`flex justify-center ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.4s' }}>
-                <p className="text-muted-foreground text-sm mb-4">Or visit our dedicated signup page</p>
-              </div>
-              
-              <div className={`flex justify-center ${isVisible ? 'animate-fade-in-up' : ''}`} style={{ animationDelay: '0.5s' }}>
-                <Link to="/waitlist">
-                  <Button 
-                    variant="heroOutline"
-                    size="lg" 
-                    className="group"
-                  >
-                    <Sparkles className="w-5 h-5" />
-                    Join the Waitlist
-                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-              </div>
 
               {/* Trust indicators */}
               <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-muted-foreground ${isVisible ? 'animate-fade-in' : ''}`} style={{ animationDelay: '0.6s' }}>
