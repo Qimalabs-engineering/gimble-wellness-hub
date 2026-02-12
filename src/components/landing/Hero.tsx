@@ -95,38 +95,6 @@ const Hero = () => {
               </Link>
             </div>
 
-            {/* Social proof with staggered animation */}
-            <div 
-              className="flex items-center gap-6 mt-10 justify-center lg:justify-start animate-fade-in-up"
-              style={{ animationDelay: '0.6s' }}
-            >
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-background flex items-center justify-center text-xs font-medium text-foreground shadow-sm hover:scale-110 hover:z-10 transition-transform duration-200"
-                    style={{ animationDelay: `${0.7 + i * 0.1}s` }}
-                  >
-                    {String.fromCharCode(64 + i)}
-                  </div>
-                ))}
-              </div>
-              <div className="text-left">
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <svg 
-                      key={i} 
-                      className="w-4 h-4 text-primary fill-current hover:scale-125 transition-transform duration-200" 
-                      viewBox="0 0 20 20"
-                      style={{ animationDelay: `${0.8 + i * 0.05}s` }}
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground">4.9/5 from 1,000+ reviews</p>
-              </div>
-            </div>
           </div>
 
           {/* App Mockup with enhanced animation */}
