@@ -158,7 +158,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+2349133309770</p>
                     <p className="text-sm text-muted-foreground">Mon-Fri, 9am-6pm EST</p>
                   </div>
                 </div>
@@ -169,8 +169,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Visit Us</h3>
-                    <p className="text-muted-foreground">123 Wellness Street</p>
-                    <p className="text-muted-foreground">San Francisco, CA 94102</p>
+                    <p className="text-muted-foreground">Surulere</p>
+                    <p className="text-muted-foreground">Lagos, Nigeria</p>
                   </div>
                 </div>
               </div>
