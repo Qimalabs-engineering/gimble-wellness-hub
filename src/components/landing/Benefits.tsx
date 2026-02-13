@@ -100,24 +100,6 @@ const Benefits = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float-delayed blob" />
       
       <div className="container mx-auto px-6 relative z-10">
-        {/* Stats with animated counters */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className={`text-center group ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              <div className="text-4xl lg:text-6xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                {isVisible ? <AnimatedCounter value={stat.value} suffix={stat.suffix} /> : `0${stat.suffix}`}
-              </div>
-              <p className="text-muted-foreground text-sm lg:text-base">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
         {/* Outcomes */}
         <div className={`text-center max-w-3xl mx-auto mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">

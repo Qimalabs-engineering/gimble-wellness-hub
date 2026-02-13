@@ -3,7 +3,6 @@ import Hero from "@/components/landing/Hero";
 
 import HowItWorks from "@/components/landing/HowItWorks";
 import Features from "@/components/landing/Features";
-import Testimonials from "@/components/landing/Testimonials";
 import Benefits from "@/components/landing/Benefits";
 
 import CTA from "@/components/landing/CTA";
@@ -37,7 +36,6 @@ const Index = () => {
       
       <HowItWorks />
       <Features />
-      <Testimonials />
       <Benefits />
       <CTA />
       <Footer />
