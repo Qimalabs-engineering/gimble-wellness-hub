@@ -13,6 +13,8 @@ import Solutions from "./pages/Solutions";
 import Resources from "./pages/Resources";
 import Company from "./pages/Company";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import BlogAdmin from "./pages/BlogAdmin";
 import FAQPage from "./pages/FAQ";
 import Waitlist from "./pages/Waitlist";
 import NotFound from "./pages/NotFound";
@@ -36,6 +38,8 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/company" element={<Company />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/blog-admin" element={<BlogAdmin />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/waitlist" element={<Waitlist />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
