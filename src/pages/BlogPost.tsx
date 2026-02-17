@@ -103,7 +103,7 @@ const BlogPostPage = () => {
 
           {post.content && (
             <div
-              className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 [&_a]:text-primary [&_a]:underline [&_a]:cursor-pointer"
+              className="blog-content prose prose-lg dark:prose-invert max-w-none text-foreground/90"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           )}
