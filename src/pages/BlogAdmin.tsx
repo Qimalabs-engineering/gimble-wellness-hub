@@ -11,6 +11,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Pencil, Trash2, Plus, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import RichTextEditor from "@/components/RichTextEditor";
 
 interface BlogPost {
   id: string;
@@ -191,7 +192,10 @@ const BlogAdmin = () => {
                 </div>
                 <div>
                   <Label>Content</Label>
-                  <Textarea value={form.content} onChange={(e) => setForm({ ...form, content: e.target.value })} rows={8} />
+                  <RichTextEditor
+                    content={form.content}
+                    onChange={(html) => setForm({ ...form, content: html })}
+                  />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
