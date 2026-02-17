@@ -102,9 +102,10 @@ const BlogPostPage = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">{post.title}</h1>
 
           {post.content && (
-            <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 whitespace-pre-wrap">
-              {post.content}
-            </div>
+            <div
+              className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 [&_a]:text-primary [&_a]:underline [&_a]:cursor-pointer"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
           )}
         </div>
       </article>
