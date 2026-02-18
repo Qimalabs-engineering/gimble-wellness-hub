@@ -21,6 +21,7 @@ import {
   Undo,
   Redo,
   Minus,
+  RectangleHorizontal,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -35,24 +36,27 @@ const MenuButton = ({
   active,
   children,
   title,
+  label,
 }: {
   onClick: () => void;
   active?: boolean;
   children: React.ReactNode;
   title: string;
+  label?: string;
 }) => (
   <Button
     type="button"
     variant="ghost"
-    size="icon"
+    size={label ? "sm" : "icon"}
     className={cn(
-      "h-8 w-8 rounded-md",
+      label ? "h-8 px-2 rounded-md text-xs gap-1" : "h-8 w-8 rounded-md",
       active && "bg-accent text-accent-foreground"
     )}
     onClick={onClick}
     title={title}
   >
     {children}
+    {label && <span>{label}</span>}
   </Button>
 );
 
@@ -70,8 +74,9 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
         },
       }),
       Image.configure({
+        inline: true,
         HTMLAttributes: {
-          class: "rounded-lg max-w-full mx-auto",
+          class: "rounded-lg max-w-full",
         },
       }),
     ],
@@ -105,6 +110,16 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
         .setLink({ href: url })
         .run();
     }
+  };
+
+  const addButton = () => {
+    const label = prompt("Button label:", "Click here");
+    if (!label) return;
+    const url = prompt("Button URL:", "https://");
+    if (!url) return;
+    // Insert a button-styled anchor as HTML
+    const html = `<a href="${url}" class="blog-btn" target="_blank" rel="noopener noreferrer">${label}</a>`;
+    editor.chain().focus().insertContent(html).run();
   };
 
   const addImage = () => {
@@ -209,7 +224,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
 
         <div className="w-px h-8 bg-border mx-1" />
 
-        <MenuButton onClick={addLink} active={editor.isActive("link")} title="Add Link">
+        <MenuButton onClick={addLink} active={editor.isActive("link")} title="Add Hyperlink" label="Link">
           <LinkIcon className="w-4 h-4" />
         </MenuButton>
         <MenuButton
@@ -217,6 +232,9 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
           title="Remove Link"
         >
           <Unlink className="w-4 h-4" />
+        </MenuButton>
+        <MenuButton onClick={addButton} title="Insert Button" label="Button">
+          <RectangleHorizontal className="w-4 h-4" />
         </MenuButton>
         <MenuButton onClick={addImage} title="Add Image">
           <ImageIcon className="w-4 h-4" />
