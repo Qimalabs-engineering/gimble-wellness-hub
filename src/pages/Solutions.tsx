@@ -65,7 +65,7 @@ const Solutions = () => {
       <SEO 
         title="Solutions - Corporate, Education, Government & Healthcare | Gimble"
         description="Tailored mental health solutions for corporate wellness, education, government, and healthcare. Discover how Gimble adapts to your industry's unique needs."
-        canonical="https://gimble.app/solutions"
+        canonical="https://usegimble.io/solutions"
       />
       <Navbar />
       

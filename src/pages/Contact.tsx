@@ -31,7 +31,7 @@ const Contact = () => {
       <SEO 
         title="Contact Gimble - Book a Demo | Mental Health Platform"
         description="Get in touch with Gimble. Book a personalized demo to see how our mental health platform can support your organization's wellbeing needs."
-        canonical="https://gimble.app/contact"
+        canonical="https://usegimble.io/contact"
       />
       <Navbar />
       

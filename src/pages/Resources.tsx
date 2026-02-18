@@ -63,7 +63,7 @@ const Resources = () => {
       <SEO 
         title="Resources - Guides, Webinars & Mental Health Insights | Gimble"
         description="Access free resources on workplace mental health: guides, webinars, case studies, and expert insights to help you build a healthier organization."
-        canonical="https://gimble.app/resources"
+        canonical="https://usegimble.io/resources"
       />
       <Navbar />
       

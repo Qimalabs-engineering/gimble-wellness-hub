@@ -31,7 +31,7 @@ const DeleteAccount = () => {
       <SEO
         title="Delete Your Account | Gimble"
         description="Learn how to delete your Gimble account and what happens to your data after deletion."
-        canonical="https://gimble.app/delete-account"
+        canonical="https://usegimble.io/delete-account"
       />
       <Navbar />
 

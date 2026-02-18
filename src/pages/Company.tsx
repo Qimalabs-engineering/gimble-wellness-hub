@@ -58,7 +58,7 @@ const Company = () => {
       <SEO 
         title="About Gimble - Our Mission, Team & Values"
         description="Learn about Gimble's mission to improve mental health across Africa. Meet our team and discover the values that drive our work."
-        canonical="https://gimble.app/company"
+        canonical="https://usegimble.io/company"
       />
       <Navbar />
       
@@ -202,7 +202,7 @@ const Company = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <div className="flex items-center gap-3 justify-center">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-foreground">hello@gimble.app</span>
+                <span className="text-foreground">hello@usegimble.io</span>
               </div>
               <div className="flex items-center gap-3 justify-center">
                 <MapPin className="w-5 h-5 text-primary" />
