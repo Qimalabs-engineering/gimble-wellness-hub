@@ -54,9 +54,6 @@ Your organization (employer, institution, or group) receives only aggregated and
 **With service providers:**
 We may share data with trusted third-party service providers who assist us in operating our platform (e.g., cloud hosting, analytics). These providers are contractually obligated to protect your data.
 
-**Legal requirements:**
-We may disclose your information if required by law, court order, or governmental authority, or to protect the rights, property, or safety of Gimble, our users, or the public.
-
 **Business transfers:**
 In the event of a merger, acquisition, or sale of assets, your data may be transferred. We will notify you before your data is subject to a different privacy policy.
 
@@ -101,7 +98,7 @@ You will receive a confirmation email once the deletion process is complete.`,
 - **Objection:** Object to certain processing of your data
 - **Withdrawal of consent:** Withdraw consent at any time where processing is based on consent
 
-To exercise any of these rights, contact us at privacy@gimble.app.`,
+To exercise any of these rights, contact us at contact@usegimble.io.`,
   },
   {
     title: "9. Account Deletion",
@@ -117,7 +114,7 @@ During the deletion processing period, your account may be restricted. We may no
     title: "10. Children's Privacy",
     content: `The Service is not intended for children. Where local law requires a minimum age threshold, we do not knowingly collect personal data from users below that age. If we become aware that we have collected data from a child without verified parental consent, we will take steps to delete that information promptly.
 
-If you believe a child has provided us with personal information, please contact us at privacy@gimble.app.`,
+If you believe a child has provided us with personal information, please contact us at contact@usegimble.io.`,
   },
   {
     title: "11. Third-Party Links",
@@ -134,8 +131,8 @@ Continued use of the Service after changes are posted constitutes your acceptanc
     content: `If you have questions, concerns, or requests regarding this Privacy Policy, please contact us:
 
 **Gimble Privacy Team**
-Email: privacy@gimble.app
-Website: https://gimble.app/contact
+Email: contact@usegimble.io
+Website: https://usegimble.io/contact
 
 We aim to respond to all privacy-related inquiries within 30 days.`,
   },
