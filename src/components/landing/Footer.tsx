@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 import gimbleIcon from "@/assets/gimble-icon.png";
 
 const Footer = () => {
@@ -71,9 +72,9 @@ const Footer = () => {
             © 2024 Gimble. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-background/60 hover:text-background transition-colors text-sm">
+            <Link to="/privacy-policy" className="text-background/60 hover:text-background transition-colors text-sm">
               Privacy Policy
-            </a>
+            </Link>
             <a href="#" className="text-background/60 hover:text-background transition-colors text-sm">
               Terms of Service
             </a>

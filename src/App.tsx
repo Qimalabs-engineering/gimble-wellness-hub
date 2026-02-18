@@ -18,6 +18,8 @@ import BlogAdmin from "./pages/BlogAdmin";
 import FAQPage from "./pages/FAQ";
 import Waitlist from "./pages/Waitlist";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import DeleteAccount from "./pages/DeleteAccount";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
             <Route path="/blog-admin" element={<BlogAdmin />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/waitlist" element={<Waitlist />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/delete-account" element={<DeleteAccount />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
