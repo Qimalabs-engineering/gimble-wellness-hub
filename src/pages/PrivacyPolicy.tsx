@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
       <SEO
         title="Privacy Policy | Gimble"
         description="Learn how Gimble collects, uses, and protects your personal data. Your privacy and mental wellness data are handled with the highest care."
-        canonical="https://gimble.app/privacy-policy"
+        canonical="https://usegimble.io/privacy-policy"
       />
       <Navbar />
 

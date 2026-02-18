@@ -64,7 +64,7 @@ const FAQPage = () => {
       <SEO
         title="FAQ - Gimble Mental Health Platform"
         description="Find answers to frequently asked questions about Gimble's mental health platform, privacy features, implementation, and organizational insights."
-        canonical="https://gimble.app/faq"
+        canonical="https://usegimble.io/faq"
         structuredData={structuredData}
       />
       <Navbar />

@@ -67,7 +67,7 @@ const BlogPostPage = () => {
       <SEO
         title={`${post.title} - Gimble Blog`}
         description={post.excerpt || "Read this article on the Gimble blog."}
-        canonical={`https://gimble.app/blog/${post.id}`}
+        canonical={`https://usegimble.io/blog/${post.id}`}
       />
       <Navbar />
 

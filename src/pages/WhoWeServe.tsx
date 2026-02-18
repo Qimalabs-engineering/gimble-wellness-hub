@@ -74,7 +74,7 @@ const WhoWeServe = () => {
       <SEO 
         title="Who We Serve - Companies, Schools, Government & Non-profits | Gimble"
         description="Gimble serves companies, schools, government agencies, and non-profits with tailored mental health solutions. See how we support employee and student wellbeing."
-        canonical="https://gimble.app/who-we-serve"
+        canonical="https://usegimble.io/who-we-serve"
       />
       <Navbar />
       

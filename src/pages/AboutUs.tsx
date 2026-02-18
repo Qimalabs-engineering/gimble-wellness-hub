@@ -36,7 +36,7 @@ const AboutUs = () => {
       <SEO 
         title="About Gimble - Our Mission & Story | Mental Health Platform"
         description="Learn about Gimble's mission to support mental health in organizations. 500+ organizations trust us to help their people thrive with ethical wellness solutions."
-        canonical="https://gimble.app/about"
+        canonical="https://usegimble.io/about"
       />
       <Navbar />
       

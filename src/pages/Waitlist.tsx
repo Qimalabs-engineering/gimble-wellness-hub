@@ -10,7 +10,7 @@ const Waitlist = () => {
       <SEO
         title="Join the Waitlist - Gimble"
         description="Be the first to experience Gimble, Africa's mental wellness platform. Join our waitlist for early access."
-        canonical="https://gimble.app/waitlist"
+        canonical="https://usegimble.io/waitlist"
       />
       <Navbar />
       <section className="pt-32 pb-24 lg:pt-40 lg:pb-32">

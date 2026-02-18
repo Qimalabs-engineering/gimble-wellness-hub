@@ -12,23 +12,23 @@ interface SEOProps {
 const SEO = ({
   title = "Gimble - Mental Health & Wellness Platform for Organizations",
   description = "Gimble is the mental health platform that empowers individuals while giving organizations ethical insights into wellbeing. Trusted by 500+ companies and schools.",
-  canonical = "https://gimble.app",
+  canonical = "https://usegimble.io",
   type = "website",
-  image = "https://gimble.app/og-image.png",
+  image = "https://usegimble.io/og-image.png",
   structuredData,
 }: SEOProps) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Gimble",
-    "url": "https://gimble.app",
-    "logo": "https://gimble.app/logo.png",
+    "url": "https://usegimble.io",
+    "logo": "https://usegimble.io/logo.png",
     "description": description,
     "sameAs": [],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "hello@gimble.app"
+      "email": "hello@usegimble.io"
     }
   };
 

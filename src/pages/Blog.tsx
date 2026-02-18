@@ -43,7 +43,7 @@ const Blog = () => {
       <SEO 
         title="Blog - Gimble | Mental Health & Wellness Insights"
         description="Explore insights, tips, and research on mental health and workplace wellness from the Gimble team."
-        canonical="https://gimble.app/blog"
+        canonical="https://usegimble.io/blog"
       />
       <Navbar />
       

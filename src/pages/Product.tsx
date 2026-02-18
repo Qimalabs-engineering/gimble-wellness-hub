@@ -44,7 +44,7 @@ const Product = () => {
       <SEO 
         title="Product Features - Gimble Mental Health Platform"
         description="Explore Gimble's powerful features: mobile app, AI insights, privacy-first design, analytics dashboard, wellness journeys, and team wellness tools."
-        canonical="https://gimble.app/product"
+        canonical="https://usegimble.io/product"
       />
       <Navbar />
       

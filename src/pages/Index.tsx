@@ -14,11 +14,11 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Gimble",
-    "url": "https://gimble.app",
+    "url": "https://usegimble.io",
     "description": "Mental health platform that empowers individuals while giving organizations ethical insights into wellbeing.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://gimble.app/search?q={search_term_string}",
+      "target": "https://usegimble.io/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -28,7 +28,7 @@ const Index = () => {
       <SEO 
         title="Gimble - Mental Health & Wellness Platform for Organizations"
         description="Gimble empowers individuals with mental health tools while giving organizations ethical insights into team wellbeing. Reduce burnout, improve retention. Trusted by 20+ organizations."
-        canonical="https://gimble.app"
+        canonical="https://usegimble.io"
         structuredData={structuredData}
       />
       <Navbar />
