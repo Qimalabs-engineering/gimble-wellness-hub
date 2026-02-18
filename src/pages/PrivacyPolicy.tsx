@@ -7,7 +7,9 @@ const sections = [
     title: "1. Introduction",
     content: `Gimble ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Gimble application and website (collectively, the "Service").
 
-Please read this policy carefully. By using our Service, you agree to the collection and use of information in accordance with this policy.`,
+Please read this policy carefully. By using our Service, you agree to the collection and use of information in accordance with this policy.
+
+**Our legal role:** Gimble acts as a data controller for personal data processed through the Service, and as a data processor where we process data on behalf of an organization under a data processing agreement.`,
   },
   {
     title: "2. Information We Collect",
@@ -23,6 +25,7 @@ Please read this policy carefully. By using our Service, you agree to the collec
 - Device information (device type, operating system, app version)
 - Usage data (features used, session duration, in-app activity)
 - Log data (IP address, browser type, pages visited on our website)
+- We may use cookies and similar technologies on our website to collect this information.
 
 **Information we do NOT collect:**
 - We do not collect biometric data
@@ -35,16 +38,18 @@ Please read this policy carefully. By using our Service, you agree to the collec
 
 - Provide, maintain, and improve the Gimble Service
 - Personalize your wellness experience and recommendations
-- Generate anonymized, aggregated insights for your organization (never individual-level data)
+- Generate aggregated and de-identified insights for your organization (never individual-level data)
 - Send you relevant notifications and updates about the Service
 - Respond to your support requests and inquiries
 - Comply with legal obligations and enforce our Terms of Service
-- Detect, investigate, and prevent fraudulent or unauthorized activity`,
+- Detect, investigate, and prevent fraudulent or unauthorized activity
+
+**Legal basis for processing:** We process personal data based on one or more of the following legal bases: your consent; performance of a contract (providing the Service); compliance with legal obligations; and our legitimate interests in operating and improving the Service.`,
   },
   {
     title: "4. How Your Data Is Shared",
     content: `**With your organization:**
-Your organization (employer, institution, or group) receives only anonymized, aggregated trend data — never individual entries, names, or identifiable information. Your personal wellness data is strictly private to you.
+Your organization (employer, institution, or group) receives only aggregated and de-identified trend data — never individual entries, names, or identifiable information. Your personal wellness data is strictly private to you. We apply technical and organizational measures to prevent re-identification. Aggregated reports are generated only for groups that meet a minimum size threshold to reduce the risk of re-identification.
 
 **With service providers:**
 We may share data with trusted third-party service providers who assist us in operating our platform (e.g., cloud hosting, analytics). These providers are contractually obligated to protect your data.
@@ -58,29 +63,35 @@ In the event of a merger, acquisition, or sale of assets, your data may be trans
 We do not sell, rent, or trade your personal information to third parties for marketing purposes.`,
   },
   {
-    title: "5. Data Security",
+    title: "5. International Data Transfers",
+    content: `Your data may be processed and stored in countries outside your country of residence, including countries that may have different data protection laws than your own. Where required by applicable law, we rely on appropriate safeguards — such as standard contractual clauses approved by the European Commission — to protect your personal data during international transfers.`,
+  },
+  {
+    title: "6. Data Security",
     content: `We implement industry-standard security measures to protect your personal information, including:
 
 - Encryption of data in transit (TLS/SSL) and at rest
 - Access controls limiting who can view your data
 - Regular security audits and vulnerability assessments
-- Anonymization of data shared at the organizational level
+- Aggregation and de-identification of data shared at the organizational level
+- Access to production systems is restricted to authorized personnel and is logged and monitored
 
 While we take every reasonable precaution, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security.`,
   },
   {
-    title: "6. Data Retention",
+    title: "7. Data Retention",
     content: `We retain your personal data for as long as your account is active or as needed to provide the Service. If you request account deletion, we will process your request within 7–14 business days.
 
 After deletion is complete:
-- Your personal data is permanently removed from our systems
+- Your personal data is permanently removed from our active systems
 - Your login will be disabled and your profile removed
-- Anonymized, aggregated data that has already been included in organizational trend reports may be retained as it cannot be re-identified
+- Aggregated and de-identified data that has already been included in organizational trend reports may be retained as it cannot be re-identified
+- Backup systems may retain limited copies for a short period in accordance with our backup and disaster recovery policies
 
 You will receive a confirmation email once the deletion process is complete.`,
   },
   {
-    title: "7. Your Rights",
+    title: "8. Your Rights",
     content: `Depending on your location, you may have the following rights regarding your personal data:
 
 - **Access:** Request a copy of the personal data we hold about you
@@ -93,33 +104,33 @@ You will receive a confirmation email once the deletion process is complete.`,
 To exercise any of these rights, contact us at privacy@gimble.app.`,
   },
   {
-    title: "8. Account Deletion",
+    title: "9. Account Deletion",
     content: `You may request deletion of your account at any time through the Gimble app:
 
 1. Log in to your Gimble account
 2. Navigate to the Profile tab
 3. Tap "Delete Account" and follow the prompts
 
-Upon request, we will notify your provider and typically complete the process within 7–14 business days. During this period, you can still log in and use the app. Once deletion is complete, your login will be disabled and your profile removed in accordance with this Privacy Policy and our Terms of Service.`,
+During the deletion processing period, your account may be restricted. We may notify the organization only that a user account has been removed, without disclosing any personal data or reason. The deletion process is typically completed within 7–14 business days. Once complete, your login will be disabled and your profile removed in accordance with this Privacy Policy and our Terms of Service.`,
   },
   {
-    title: "9. Children's Privacy",
-    content: `The Gimble Service is not intended for children under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected data from a child under 16 without verified parental consent, we will take steps to delete that information promptly.
+    title: "10. Children's Privacy",
+    content: `The Service is not intended for children. Where local law requires a minimum age threshold, we do not knowingly collect personal data from users below that age. If we become aware that we have collected data from a child without verified parental consent, we will take steps to delete that information promptly.
 
 If you believe a child has provided us with personal information, please contact us at privacy@gimble.app.`,
   },
   {
-    title: "10. Third-Party Links",
+    title: "11. Third-Party Links",
     content: `Our Service may contain links to third-party websites or services. We are not responsible for the privacy practices of those third parties. We encourage you to review the privacy policies of any third-party sites you visit.`,
   },
   {
-    title: "11. Changes to This Policy",
+    title: "12. Changes to This Policy",
     content: `We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the "Last Updated" date. We encourage you to review this policy periodically.
 
 Continued use of the Service after changes are posted constitutes your acceptance of the updated policy.`,
   },
   {
-    title: "12. Contact Us",
+    title: "13. Contact Us",
     content: `If you have questions, concerns, or requests regarding this Privacy Policy, please contact us:
 
 **Gimble Privacy Team**
@@ -164,7 +175,7 @@ const PrivacyPolicy = () => {
             <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-12">
               <p className="text-foreground font-medium mb-1">Our commitment to you</p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                At Gimble, your mental wellness data is yours. Your organization only ever sees anonymized, aggregated trends — never your individual entries, name, or identity. Privacy is not a feature; it is the foundation of everything we build.
+                At Gimble, your mental wellness data is yours. Your organization only ever sees aggregated and de-identified trends — never your individual entries, name, or identity. Privacy is not a feature; it is the foundation of everything we build.
               </p>
             </div>
 
