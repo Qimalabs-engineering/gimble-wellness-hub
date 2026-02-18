@@ -83,7 +83,7 @@ const AboutUs = () => {
                   We saw an opportunity to create something different: a platform that empowers individuals with personal wellness tools while giving organizations the aggregated insights they need to make informed decisions.
                 </p>
                 <p>
-                  Today, Gimble serves hundreds of organizations worldwide, helping them build cultures where mental health is a priority, not an afterthought.
+                  Our goal is to help organizations build cultures where mental health is a priority, not an afterthought — and we're just getting started.
                 </p>
               </div>
             </div>
@@ -93,42 +93,6 @@ const AboutUs = () => {
                 alt="Diverse team collaborating in modern office" 
                 className="w-full rounded-3xl shadow-card"
               />
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-card">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <p className="text-3xl font-bold text-primary">500+</p>
-                    <p className="text-sm text-muted-foreground">Organizations</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-primary">250K+</p>
-                    <p className="text-sm text-muted-foreground">Users</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Banner */}
-      <section className="py-16 gradient-primary">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="animate-fade-in-up" style={{ animationDelay: '0s' }}>
-              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">500+</p>
-              <p className="text-primary-foreground/80">Organizations</p>
-            </div>
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">250K+</p>
-              <p className="text-primary-foreground/80">Users Supported</p>
-            </div>
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">30+</p>
-              <p className="text-primary-foreground/80">Countries</p>
-            </div>
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <p className="text-4xl lg:text-5xl font-bold text-primary-foreground mb-2">4.9</p>
-              <p className="text-primary-foreground/80">User Rating</p>
             </div>
           </div>
         </div>
