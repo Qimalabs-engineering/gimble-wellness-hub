@@ -113,6 +113,9 @@ const BlogAdmin = () => {
       image_url: post.image_url || "",
       read_time: post.read_time || "",
       published: post.published,
+      meta_title: post.meta_title || "",
+      meta_description: post.meta_description || "",
+      focus_keyword: post.focus_keyword || "",
     });
     setEditing(post.id);
     setShowForm(true);
