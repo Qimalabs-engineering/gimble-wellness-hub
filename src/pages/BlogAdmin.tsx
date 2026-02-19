@@ -22,6 +22,9 @@ interface BlogPost {
   image_url: string | null;
   read_time: string | null;
   published: boolean;
+  meta_title: string | null;
+  meta_description: string | null;
+  focus_keyword: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -34,6 +37,9 @@ const emptyPost = {
   image_url: "",
   read_time: "",
   published: false,
+  meta_title: "",
+  meta_description: "",
+  focus_keyword: "",
 };
 
 const BlogAdmin = () => {
@@ -107,6 +113,9 @@ const BlogAdmin = () => {
       image_url: post.image_url || "",
       read_time: post.read_time || "",
       published: post.published,
+      meta_title: post.meta_title || "",
+      meta_description: post.meta_description || "",
+      focus_keyword: post.focus_keyword || "",
     });
     setEditing(post.id);
     setShowForm(true);
@@ -211,6 +220,55 @@ const BlogAdmin = () => {
                   <Label>Image URL</Label>
                   <Input value={form.image_url} onChange={(e) => setForm({ ...form, image_url: e.target.value })} placeholder="https://..." />
                 </div>
+
+                {/* SEO Section */}
+                <div className="border-t border-border pt-4 mt-2">
+                  <h3 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
+                    <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-xs">SEO</span>
+                    Search Engine Optimisation
+                  </h3>
+                  <div className="grid gap-4">
+                    <div>
+                      <Label>Focus Keyword</Label>
+                      <Input
+                        value={form.focus_keyword}
+                        onChange={(e) => setForm({ ...form, focus_keyword: e.target.value })}
+                        placeholder="e.g. workplace mental health"
+                      />
+                      <p className="text-xs text-muted-foreground mt-1">The main keyword this post should rank for.</p>
+                    </div>
+                    <div>
+                      <Label>
+                        SEO Title
+                        <span className={`ml-2 text-xs font-normal ${(form.meta_title || form.title).length > 60 ? 'text-destructive' : 'text-muted-foreground'}`}>
+                          {(form.meta_title || form.title).length}/60
+                        </span>
+                      </Label>
+                      <Input
+                        value={form.meta_title}
+                        onChange={(e) => setForm({ ...form, meta_title: e.target.value })}
+                        placeholder={form.title || "Custom SEO title (defaults to post title)"}
+                      />
+                      <p className="text-xs text-muted-foreground mt-1">Shown in search results. Keep under 60 characters.</p>
+                    </div>
+                    <div>
+                      <Label>
+                        Meta Description
+                        <span className={`ml-2 text-xs font-normal ${(form.meta_description || form.excerpt).length > 160 ? 'text-destructive' : 'text-muted-foreground'}`}>
+                          {(form.meta_description || form.excerpt).length}/160
+                        </span>
+                      </Label>
+                      <Textarea
+                        value={form.meta_description}
+                        onChange={(e) => setForm({ ...form, meta_description: e.target.value })}
+                        placeholder={form.excerpt || "Custom meta description (defaults to excerpt)"}
+                        rows={3}
+                      />
+                      <p className="text-xs text-muted-foreground mt-1">Shown in search results. Keep under 160 characters.</p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex items-center gap-3">
                   <Switch checked={form.published} onCheckedChange={(checked) => setForm({ ...form, published: checked })} />
                   <Label>Published</Label>
