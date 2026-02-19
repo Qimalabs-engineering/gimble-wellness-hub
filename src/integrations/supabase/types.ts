@@ -20,8 +20,11 @@ export type Database = {
           content: string | null
           created_at: string
           excerpt: string | null
+          focus_keyword: string | null
           id: string
           image_url: string | null
+          meta_description: string | null
+          meta_title: string | null
           published: boolean
           read_time: string | null
           title: string
@@ -32,8 +35,11 @@ export type Database = {
           content?: string | null
           created_at?: string
           excerpt?: string | null
+          focus_keyword?: string | null
           id?: string
           image_url?: string | null
+          meta_description?: string | null
+          meta_title?: string | null
           published?: boolean
           read_time?: string | null
           title: string
@@ -44,8 +50,11 @@ export type Database = {
           content?: string | null
           created_at?: string
           excerpt?: string | null
+          focus_keyword?: string | null
           id?: string
           image_url?: string | null
+          meta_description?: string | null
+          meta_title?: string | null
           published?: boolean
           read_time?: string | null
           title?: string
