@@ -68,9 +68,10 @@ const BlogPostPage = () => {
   return (
     <main className="min-h-screen bg-background">
       <SEO
-        title={`${post.title} - Gimble Blog`}
-        description={post.excerpt || "Read this article on the Gimble blog."}
+        title={post.meta_title || `${post.title} - Gimble Blog`}
+        description={post.meta_description || post.excerpt || "Read this article on the Gimble blog."}
         canonical={`https://usegimble.io/blog/${post.id}`}
+        image={post.image_url || "https://usegimble.io/og-image.png"}
       />
       <Navbar />
 
