@@ -16,6 +16,9 @@ interface BlogPost {
   image_url: string | null;
   read_time: string | null;
   published: boolean;
+  meta_title: string | null;
+  meta_description: string | null;
+  focus_keyword: string | null;
   created_at: string;
 }
 

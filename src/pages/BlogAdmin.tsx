@@ -37,6 +37,9 @@ const emptyPost = {
   image_url: "",
   read_time: "",
   published: false,
+  meta_title: "",
+  meta_description: "",
+  focus_keyword: "",
 };
 
 const BlogAdmin = () => {
