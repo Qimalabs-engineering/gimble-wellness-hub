@@ -122,9 +122,9 @@ const ImageNodeView = ({ node, updateAttributes, selected }: NodeViewProps) => {
 
       {/* The image itself */}
       <img
-        src={node.attrs.src}
-        alt={node.attrs.alt || ""}
-        title={node.attrs.title || ""}
+        src={attrs.src || ""}
+        alt={attrs.alt || ""}
+        title={attrs.title || ""}
         style={{ width: "100%", display: "block" }}
         className={cn("rounded-lg", selected && "ring-2 ring-primary ring-offset-1")}
         draggable={false}
