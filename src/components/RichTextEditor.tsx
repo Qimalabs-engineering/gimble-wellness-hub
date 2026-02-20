@@ -1,9 +1,9 @@
 import { useEditor, EditorContent, NodeViewWrapper, ReactNodeViewRenderer } from "@tiptap/react";
+import type { NodeViewProps } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Link from "@tiptap/extension-link";
 import Underline from "@tiptap/extension-underline";
 import { Image as TiptapImage } from "@tiptap/extension-image";
-import { Node } from "@tiptap/core";
 import { useEffect } from "react";
 import {
   Bold,
