@@ -358,11 +358,35 @@
 }
 
 .blog-content img {
-  display: inline-block;
+  display: block;
   max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
+}
+
+/* Alignment overrides applied via data-align attribute */
+.blog-content img[data-align="left"] {
+  float: left;
+  margin: 0.5rem 1.25rem 0.5rem 0;
+}
+
+.blog-content img[data-align="right"] {
+  float: right;
+  margin: 0.5rem 0 0.5rem 1.25rem;
+}
+
+.blog-content img[data-align="center"] {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clearfix so floated images don't bleed out of containers */
+.blog-content::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .blog-content br {
