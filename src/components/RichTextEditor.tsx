@@ -36,13 +36,10 @@ interface RichTextEditorProps {
 }
 
 // ── Floating toolbar that appears when an image node is selected ──────────────
-const ImageNodeView = ({ node, updateAttributes, selected }: {
-  node: { attrs: { src: string; alt?: string; title?: string; width?: string; "data-align"?: string } };
-  updateAttributes: (attrs: Record<string, string>) => void;
-  selected: boolean;
-}) => {
-  const width = node.attrs.width || "100%";
-  const align = node.attrs["data-align"] || "center";
+const ImageNodeView = ({ node, updateAttributes, selected }: NodeViewProps) => {
+  const attrs = node.attrs as { src?: string; alt?: string; title?: string; width?: string; "data-align"?: string };
+  const width = attrs.width || "100%";
+  const align = attrs["data-align"] || "center";
 
   const sizeOptions = [
     { label: "S", title: "Small (33%)", value: "33%" },
